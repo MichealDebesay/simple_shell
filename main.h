@@ -1,5 +1,7 @@
-#ifndef MAIN_H
-#define MAIN_H
+#pragma once
+/*
+  Used libraries.
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -26,11 +28,11 @@ char *builtin_str[] = {
   "exit"
 };
 
-int (*builtin_func[]) (char **) = {
+int (*builtin_func[]) () = {
   &hsh_exit
 };
 
-int lsh_num_builtins() {
+int hsh_num_builtins() {
   return sizeof(builtin_str) / sizeof(char *);
 }
 
@@ -41,6 +43,3 @@ int hsh_exit()
 {
   return 0;
 }
-
-
-#endif

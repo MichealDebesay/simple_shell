@@ -14,6 +14,7 @@ char* hsh_readline();
 char** hsh_parse_arg(char* line);
 int hsh_launch( char** arg);
 int hsh_execute(char** arg);
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 
 
 /*

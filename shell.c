@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 char* hsh_readline()
 {
     char* line = NULL;
@@ -37,7 +36,7 @@ char** hsh_parse_arg(char* line)
         if (position >= bufsize){
             bufsize += HSH_TOKEN_BUFSIZE;
 	    /* realloc forbiden */
-            tokens = _realloc(tokens, bufsize * sizeof(char*));
+            tokens = realloc(tokens, bufsize * sizeof(char*));
             if (tokens == NULL)
             {
                 fprintf(stderr, "hsh: allocation error \n");
